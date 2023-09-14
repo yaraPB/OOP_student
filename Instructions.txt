@@ -9,9 +9,9 @@ and encapsulated properly while providing methods for managing the student's enr
 Step 1: Define the Student class
 Create a Java class named Student with the following attributes:
 
-studentID (String)
 name (String)
-age (int)
+studentID (int)
+gpa (float)
 enrolledCourses (ArrayList<String>)
 
 Ensure that these attributes are declared as private to encapsulate them and hide sensitive information.
