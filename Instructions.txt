@@ -1,0 +1,36 @@
+Exercise: Managing a Student Enrollment System
+
+In this exercise, you will create a Java class to represent a student in a university enrollment system.
+The student should have attributes like student ID, name, age, and a list of enrolled courses.
+You will need to ensure that sensitive information is hidden 
+and encapsulated properly while providing methods for managing the student's enrollment.
+
+
+Step 1: Define the Student class
+Create a Java class named Student with the following attributes:
+
+studentID (String)
+name (String)
+age (int)
+enrolledCourses (ArrayList<String>)
+
+Ensure that these attributes are declared as private to encapsulate them and hide sensitive information.
+Provide getter and setter methods to access and modify these attributes. 
+Additionally, provide a constructor to initialize the student with the student ID, name, and age.
+
+Step 2: Implement Abstraction
+Implement a method enrollInCourse(String courseName) in the Student class.
+This method should represent the action of a student enrolling in a course.
+The implementation should add the course to the list of enrolled courses for the student.
+
+Step 3: Real-World Example
+In your main method, simulate a real-world scenario where a student enrolls in courses, 
+unenrolls from courses, and checks their enrolled courses.
+Ensure that you demonstrate how abstraction and encapsulation are used to 
+protect sensitive information (such as student ID) and provide a clear interface for interacting with the student's enrollment.
+
+For example, you can create instances of the Student class, enroll them in courses, and then display their enrolled courses.
+
+This exercise will give you hands-on experience with creating classes, 
+using abstraction and encapsulation to hide information, and implementing constructors and methods to work with objects.
+It also illustrates how real-world systems manage data and interactions with users.
