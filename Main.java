@@ -7,22 +7,30 @@ import java.util.*;
 
 public class Main{
   public static void main(String[] args){
+    System.out.println("Welcome to the university registration website:"); 
+    //since the students are picking from courses, the website should only offer the available ones:
     String[] courses = {"csc1111", "com2222", "mth3333"};
+    System.out.println("Here are the available courses:");
     Student s1 = new Student("AAA", 123, 4.09f, courses);
-    s1.display();
+    s1.displayCourses();
   }
-  
 }
-
 
 class Student{
     private String name;
     private int studentID;
     private float gpa;
     //we assume that the maximum amount of courses a student can take is 8
-    private String enrolledCourses[] = new String[8];
+    private String enrolledCourses[] = new String[5];
 
-    
+
+    //setting up the String with the double strings so that the UI is better:
+
+    private String ec[][] = new String[][] {{"aaa1", "aaa2", "aaa3"},
+    {"bbb1", "bbb2", "bbb3"},
+    {"ccc1", "ccc2", "ccc3"}
+};
+
     //getter and setter for name
     public void setName(String nameIN){
         this.name = nameIN;
@@ -76,4 +84,23 @@ class Student{
         for (int i = 0; i < enrolledCourses.length && i < this.enrolledCourses.length; i++) 
         this.enrolledCourses[i] = enrolledCourses[i];
     }
+
+    //Display the available courses: 
+    public void displayCourses(){
+        for(int i=0; i<3; i++){
+            for(int j=0; j<3; j++){
+                System.out.printf("|"+ec[i][j] + "|");
+            }
+            System.out.println();
+        }
+    }
+
+    //Student enrolling in a course: 
+    public String enrollInCourse(String courseName){
+        for(int i=0; i< enrolledCourses.length; i++){
+            if(courseName==enrolledCourses[i]) return "Enrolled in: " + courseName + " succesfully";
+        }
+        return "Course not found";
+    }   
+
 }
